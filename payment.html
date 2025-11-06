@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pagamento — Minha Loja</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="page-title">Minha Loja — Pagamento</h1>
+      <nav><a href="index.html">Loja</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="payment-page" style="background:#fff;padding:18px;border-radius:8px;margin-top:18px">
+      <section class="order-summary">
+        <h2>Resumo do pedido</h2>
+        <div id="order-info">Pedido #<span id="order-id">—</span> · Valor: <strong id="order-amount">R$ 0,00</strong></div>
+      </section>
+
+      <section style="margin-top:12px">
+        <h3>Escolha a forma de pagamento</h3>
+        <div id="methods-container"></div>
+        <div id="method-details" class="method-details"></div>
+      </section>
+
+      <section style="margin-top:18px;display:flex;justify-content:space-between;align-items:center">
+        <div class="small">Editar formas (acesso oculto): clique 5x no título para abrir editor.</div>
+        <div><a href="index.html" class="btn">Voltar à loja</a></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="admin-modal" class="admin-modal" style="display:none;">
+    <div class="admin-panel">
+      <h2>Editor de Formas de Pagamento (máx 3)</h2>
+      <div id="admin-list"></div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+        <button id="admin-add" class="btn">Adicionar</button>
+        <button id="admin-save" class="btn primary">Salvar</button>
+        <button id="admin-close" class="btn ghost">Fechar</button>
+      </div>
+      <p class="small" style="margin-top:8px">Configurações salvas localmente no navegador.</p>
+    </div>
+  </div>
+
+  <input type="file" id="proof-file" accept="image/*,application/pdf" style="display:none" />
+
+  <script src="payment-page.js"></script>
+</body>
+</html>

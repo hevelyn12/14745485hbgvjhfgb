@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minha Loja — Produto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="site-title">Minha Loja</h1>
+      <nav><a href="index.html">Loja</a> <a id="cart-link" href="#">Carrinho (<span id="cart-count">0</span>)</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="product">
+      <img src="https://via.placeholder.com/480x360.png?text=Camiseta+Exemplo" alt="Camiseta" class="product-image">
+      <div class="product-info">
+        <h2>Camiseta Exemplo</h2>
+        <p class="price" id="product-price">59.90</p>
+        <p>Descrição curta da camiseta. Tamanhos: P, M, G.</p>
+        <label>Quantidade: <input id="qty" type="number" value="1" min="1" style="width:70px"></label>
+        <div style="margin-top:12px;">
+          <button id="add-cart" class="btn primary">Adicionar ao carrinho</button>
+          <button id="buy-now" class="btn">Comprar agora</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart" class="cart hidden">
+      <h3>Carrinho</h3>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <div>Total: <strong id="cart-total">R$ 0,00</strong></div>
+        <div>
+          <button id="checkout-btn" class="btn primary">Finalizar Compra</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Minha Loja</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
